@@ -139,6 +139,11 @@ function getAllTask() {
             $stmt->execute(array($_SESSION['user_id']));
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+            if(empty($result)){
+                echo "<div class='col-12 text-center fs-1 text-danger'>No Tasks Found (-_-) zzZ</div>";
+            }
+
+
             foreach($result as $task) {
 
                 $checked = ($task['task_status'] == 'done') ? 'checked' : '';
@@ -258,6 +263,11 @@ function getAllNote() {
             $query = $db->getConn()->prepare("SELECT * FROM note WHERE user_id = ? ORDER BY note_id DESC");
             $query->execute(array($_SESSION['user_id']));
             $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            if(empty($result)){
+                echo "<div class='col-12 text-center fs-1 text-danger'> No Sticky Notes Found </div>
+                        <div class='col-12 text-center fs-1 text-danger'> ¯\_(⊙_ʖ⊙)_/¯ </div>";
+            }
 
             $colors = [
                 '0' => "background-color: rgb(255, 101, 163)",

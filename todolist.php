@@ -1,4 +1,4 @@
-<?php require "backend.php";?>
+<?php require "backend.php"; if(!isset($_SESSION['email'])) { header("Location: login.php"); }?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -208,7 +208,7 @@
           </div>
           <div class="col-9 text-end">
             <div class="row text-center">
-              <h1>TO DO LIST</h1>
+              <h1>To Do List </h1>
             </div>
             <div class="row m-2">
               <div class="col ">
@@ -217,7 +217,7 @@
               </div>
             </div>
             <?php 
-                            getAllTask($_SESSION['user_id']);
+                            getAllTask();
                         ?>
             </div>
       </div>
