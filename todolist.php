@@ -29,6 +29,9 @@
       font-family: 'Patrick Hand', cursive;
 
     }
+    .container-fluid .row .col-3 .row:hover button{
+        background-color: whitesmoke;
+    } 
 
     .container {
       display: block;
@@ -184,6 +187,7 @@
     .task:hover input {
       cursor: pointer;
     }
+
   </style>
 </head>
 
