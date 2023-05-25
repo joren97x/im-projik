@@ -14,15 +14,16 @@
 <style>
     .body{
         background-color: aqua;
+        background-size: cover;
+		background-image: url(bg.gif);
     }
     .container{
-        box-shadow: 0 0 15px black;
         margin: 100px auto;
         padding: 50px;
         padding-top: 25px;
         background-color: aqua;
         border-radius: 50px;
-
+        background-color: transparent
     }
     .container-fluid{
         justify-content: center;
@@ -78,18 +79,20 @@
         <li><a href="#"><button class="bt my-2" type="button"><a style="text-decoration: none; color: black;" href="home.html">Home</a></button></a></li>
         <li><a href="#"><button class="bt my-2" type="button">About Us</button></a></li>
         <li><a href="#"><button class="bt my-2" type="button">Contact Us</button></a></li>
-        <li class="r"><a href="register.html"><button class="bt my-2" type="button">Register</button></a></li>
+        <li class="r"><a href="login.php"><button class="bt my-2" type="button">Log In</button></a></li>
     </ul>
     
     <div class="container" >
-            <h2 style="text-align: center; font-family: 'Courier New', Courier, monospace;"><b>Log In</b></h2>
+            <h2 style="text-align: center; font-family: 'Courier New', Courier, monospace;"><b>Register</b></h2>
             <div class="container-fluid">
-                <form>
-                    <label for="username" class="col-form-label my-1 " style="float:left;">Username</label><br>
-                    <input type="text"  name="username" id="username" placeholder="Username" required><br>
+                <form method="POST" action="backend.php">
+                    <label for="username" class="col-form-label my-1 " style="float:left;">Email</label><br>
+                    <input type="text"  name="user_email" id="user_email" placeholder="Email" required><br>
+                    <label for="username" class="col-form-label my-1 " style="float:left;">Full Name</label><br>
+                    <input type="text"  name="user_name" id="user_name" placeholder="Full Name" required><br>
                     <label for="password"  class="col-form-label my-1" style="float:left;" >Password</label><br>
-                    <input type="password"  name="password" id="password" placeholder="Password" required><br>
-                    <input type="submit" value="login" class="my-2 btn-btn rounded" style="float:right; padding-left: 20px; padding-right: 20px;" name="" id="">
+                    <input type="password"  name="user_pass" id="user_pass" placeholder="Password" required><br>
+                    <input type="submit" value="Register" class="my-2  btn btn-success border border-dark rounded" style="float:right; padding-left: 20px; padding-right: 20px;" name="btn-confirm" id="btn-confirm">
                 </form>
             </div>
     </div>

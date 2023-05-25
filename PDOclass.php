@@ -37,7 +37,7 @@ class Database {
             return $conn;
         }
         catch(PDOException $e) {
-            return "BOANG ERROR";
+            return $e;
         }
     }
 

@@ -85,12 +85,12 @@
     <div class="container" >
             <h2 style="text-align: center; font-family: 'Courier New', Courier, monospace;"><b>Log In</b></h2>
             <div class="container-fluid">
-                <form>
-                    <label for="username" class="col-form-label my-1 " style="float:left;">Username</label><br>
-                    <input type="text"  name="username" id="username" placeholder="Username" required><br>
+                <form method="POST" action="backend.php">
+                    <label for="username" class="col-form-label my-1 " style="float:left;">Email</label><br>
+                    <input type="text"  name="user_email" id="user_email" placeholder="Username" required><br>
                     <label for="password"  class="col-form-label my-1" style="float:left;" >Password</label><br>
-                    <input type="password"  name="password" id="password" placeholder="Password" required><br>
-                    <input type="submit" value="login" class="my-2 btn-btn rounded" style="float:right; padding-left: 20px; padding-right: 20px;" name="" id="">
+                    <input type="password"  name="user_pass" id="user_pass" placeholder="Password" required><br>
+                    <input type="submit" value="Login" class="my-2 btn btn-success border border-dark rounded" style="float:right; padding-left: 20px; padding-right: 20px;" name="btn-confirm" id="btn-confirm">
                 </form>
             </div>
     </div>
